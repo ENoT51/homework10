@@ -13,7 +13,7 @@ public class Main {
     }
     public static void checkYear(int yearToCheck) {
         if (yearToCheck < 1584){
-            System.out.println("Високосный год ввели в 1584");
+            System.out.println("Високосный год ввели в 1584, введите, пожалуйста, другой год");
         }
         else if (yearToCheck % 4 == 0 && yearToCheck % 100 != 0 || yearToCheck % 400 == 0) {
             System.out.println(yearToCheck   + " год является високосным");
@@ -24,7 +24,13 @@ public class Main {
 
 
     public static void recommendAppVersionBasedOnOS(int clienOS2, int clienData) {
-        if (clienOS2 == 0 && clienData > 2015) {
+        if (clienData >= 2015) {
+            if (clienOS2 == 0) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
+        if (clienData < 2015)
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clienData <= 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
