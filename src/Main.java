@@ -5,8 +5,8 @@ public class Main {
         int year = 1583;
         checkYear(year);
 
-        int OS = 0;
-        int dataOS = 2015;
+        int OS = 1;
+        int dataOS = 2014;
         recommendAppVersionBasedOnOS(OS, dataOS);
         int delivery = 41;
         calculateDeliveryDays(delivery);
@@ -30,15 +30,16 @@ public class Main {
             } else {
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
-            if (clienData < 2015) {
+        }
+        if (clienData < 2015) {
                 if (clienOS2 == 0) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 } else {
-                    System.out.println("Установите версию приложения для Android по ссылке");
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
                 }
             }
         }
-    }
+
 
     public static void calculateDeliveryDays( int deliveryDistance) {
         if ( deliveryDistance > 0 && deliveryDistance < 20){
